@@ -1,0 +1,78 @@
+{% extends 'base_generic.html' %}
+
+<!-- Sets 'Weapons' to active navbar tab -->
+{% block nav3 %}
+<li class="dropdown active">
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+  <h2>Weapon Overview</h2>
+  <p style="width:50%">There are fourteen different weapon categories and they all play differently.
+    I know, I know, it can be difficult to find the right one for your playstyle. But I will
+    do my best, here, to highlight the important parts. Even if you don't change to a
+    new weapon, I hope to at least show you how the others sides live!
+  </p>
+</div>
+
+<!-- Light Weapons -->
+<div class="container-fluid text-center">
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="list-group text-center">
+        <h2 class="list-group-item active">Light</h2>
+        {% for weapon in weapon_types %}
+        {% if weapon.category == "Light" %}
+        <a href="/weapons/{{ weapon.url }}/" class="list-group-item">{{ weapon.className }}</a>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <!-- additional info here -->
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+</div>
+
+<!-- Heavy Weapons -->
+<div class="container-fluid text-center">
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="list-group text-center">
+        <h2 class="list-group-item active">Heavy</h2>
+        {% for weapon in weapon_types %}
+        {% if weapon.category == "Heavy" %}
+        <a href="/weapons/{{ weapon.url }}/" class="list-group-item">{{ weapon.className }}</a>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <!-- additional info here -->
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+</div>
+
+<!-- Technical Weapons -->
+<div class="container-fluid text-center">
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="list-group text-center">
+        <h2 class="list-group-item active">Technical</h2>
+        {% for weapon in weapon_types %}
+        {% if weapon.category == "Technical" %}
+        <a href="/weapons/{{ weapon.url }}/" class="list-group-item">{{ weapon.className }}</a>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <!-- additional info here -->
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+</div>
+
+{% endblock %}

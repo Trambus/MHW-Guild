@@ -1,0 +1,144 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+<!-- MH World release countdown -->
+
+
+<!-- accordian menu -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      <hr></hr>
+      <div class="panel-group" id="accordion">
+
+        <!-- Calculator panel -->
+        <div class="panel panel-default">
+          <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+            <h4 class="panel-title"><span class="glyphicon glyphicon-plus"></span> Calculator</h4>
+          </div>
+          <div id="collapse1" class="panel-collapse collapse">
+            <div class="panel-body">
+              Have you ever had trouble comparing two similar weapons? Or knowing when it's worth
+              using an element-focused weapon instead of something with more raw damage? What about
+              armor skills? Do you fret over taking <strong>Critical Eye</strong> instead of
+              <strong>Attack Up</strong>? Or would you just like to know how much all of those attack
+              boosters <i>actually</i> help?
+              <br></br>
+              Well I have the perfect thing for you! As a labor of love and curiosity, I have built a
+              calculator to answer all of the above questions-- <strong><i>and more!</i></strong> But
+              I still consider it to be a work in progress. So please leave some feedback if you run
+              into any issues.
+              <br></br>
+                <div class="text-center">
+                  <a class="btn btn-default" href="/calculator/">Start Mathing!</a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!-- panel end -->
+
+        <!-- Monsters panel -->
+        <div class="panel panel-default">
+          <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+            <h4 class="panel-title"><span class="glyphicon glyphicon-plus"></span> Monsters</h4>
+          </div>
+          <div id="collapse2" class="panel-collapse collapse">
+            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+          </div>
+        </div>
+        <!-- panel end -->
+
+        <!-- Weapons panel -->
+        <div class="panel panel-default">
+          <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+            <h4 class="panel-title"><span class="glyphicon glyphicon-plus"></span> Weapons</h4>
+          </div>
+          <div id="collapse3" class="panel-collapse collapse">
+            <div class="panel-body">
+              <h2 class="text-center">How do you like to play?</h2>
+              <br></br>
+              <h4>Do you enjoy being quick and reactive?</h4>
+              <h4 class="text-center">Or maybe you're methodical and preemptive?</h4>
+              <h4 class="text-right">Perhaps you'd rather take a more stylish approach?</h4>
+              <br></br>
+              <p>Regardless of your preferred playstyle, there is sure to
+              be a weapon type for you. Instead of the traditional blademaster/gunner
+              split: they are now categorized as <strong>Light</strong>, <strong>Heavy</strong>, and
+              <strong>Technical</strong>. No weapon type is neccessarily stronger than another. So your
+              skill level will often be the most important factor. I urge you to try every type, as each
+              one has a distinct playstyle. Not to mention that it can be useful to have a few different
+              options, depending on the Monster that you're facing.
+              </p>
+              <div class="row">
+                <hr></hr>
+                <div class="col-sm-4 text-center">
+                  <div class="list-group">
+                    <h2 class="list-group-item active">Light</h2>
+                    <a href="/weapons/sword-shield/" class="list-group-item">Sword and Shield</a>
+                    <a href="/weapons/dual-blades/" class="list-group-item">Dual Blades</a>
+                    <a href="/weapons/longsword/" class="list-group-item">Longsword</a>
+                    <a href="/weapons/light-bowgun/" class="list-group-item">Light Bowgun</a>
+                  </div>
+                </div>
+                <div class="col-sm-4 text-center">
+                  <div class="list-group">
+                    <h2 class="list-group-item active">Heavy</h2>
+                    <a href="/weapons/greatsword" class="list-group-item">Greatsword</a>
+                    <a href="/weapons/hammer/" class="list-group-item">Hammer</a>
+                    <a href="/weapons/lance/" class="list-group-item">Lance</a>
+                    <a href="/weapons/gunlance/" class="list-group-item">Gunlance</a>
+                    <a href="/weapons/heavy-bowgun/" class="list-group-item">Heavy Bowgun</a>
+                  </div>
+                </div>
+                <div class="col-sm-4 text-center">
+                  <div class="list-group">
+                    <h2 class="list-group-item active">Technical</h2>
+                    <a href="/weapons/switch-axe/" class="list-group-item">Switch Axe</a>
+                    <a href="/weapons/charge-blade/" class="list-group-item">Charge Blade</a>
+                    <a href="/weapons/hunting-horn/" class="list-group-item">Hunting Horn</a>
+                    <a href="/weapons/insect-glaive/" class="list-group-item">Insect Glaive</a>
+                    <a href="/weapons/bow/" class="list-group-item">Bow</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- panel end -->
+
+        <!-- Armors panel -->
+        <div class="panel panel-default">
+          <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+            <h4 class="panel-title"><span class="glyphicon glyphicon-plus"></span> Armors</h4>
+          </div>
+          <div id="collapse4" class="panel-collapse collapse">
+            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+          </div>
+        </div>
+        <!-- panel end -->
+
+        <!-- Items panel -->
+        <div class="panel panel-default">
+          <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+            <h4 class="panel-title"><span class="glyphicon glyphicon-plus"></span> Items</h4>
+          </div>
+          <div id="collapse5" class="panel-collapse collapse">
+            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+          </div>
+        </div>
+        <!-- panel end -->
+
+      </div>
+    </div>
+  <div class="col-sm-2"></div>
+  </div>
+</div>
+<!-- accordion end -->
+{% endblock %}

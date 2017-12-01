@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  {% block title %}<title>MH Guild</title>{% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Add additional JS in static file -->
+  {% load static %}
+  <script src="{% static 'js/scripts.js' %}"></script>
+
+  <!-- Add additional CSS in static file -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+</head>
+
+<body>
+  {% block header %}
+  <!-- Page header -->
+  <header class="container-fluid">
+    <h1>The Monster Hunter's Guild
+      <span style="float:right;" id="countdown-timer"></span>
+    </h1>
+
+
+    <h4 class="kana">モンスターハンターズギルド
+      <span style="float:right;" id="countdown-text"></span>
+    </h4>
+  </header>
+  {% endblock %}
+
+  {% block navbar %}
+  <!-- Navbar -->
+  <nav class="navbar navbar-inverse menu">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" id="navHead" href="/">
+          <span class="glyphicon glyphicon-home"></span>
+          MH World
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+
+          <!-- Each navblock can be replaced with a .active block -->
+
+          {% block nav1 %}
+          <li><a href="/calculator/">Calculator</a></li>
+          {% endblock %}
+
+          {% block nav2 %}
+          <li><a href="/monsters/">Monsters</a></li>
+          {% endblock %}
+
+          {% block nav3 %}
+          <li class="dropdown">
+          {% endblock %}
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Weapons
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/weapons/">Overview</a></li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Light</li>
+              <li><a href="/weapons/sword-shield/">Sword and Shield</a></li>
+              <li><a href="/weapons/dual-blades/">Dual Blades</a></li>
+              <li><a href="/weapons/longsword/">Longsword</a></li>
+              <li><a href="/weapons/light-bowgun/">Light Bowgun</a></li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Heavy</li>
+              <li><a href="/weapons/greatsword/">Greatsword</a></li>
+              <li><a href="/weapons/hammer/">Hammer</a></li>
+              <li><a href="/weapons/lance/">Lance</a></li>
+              <li><a href="/weapons/gunlance/">Gunlance</a></li>
+              <li><a href="/weapons/heavy-bowgun/">Heavy Bowgun</a></li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Technical</li>
+              <li><a href="/weapons/hunting-horn/">Hunting Horn</a></li>
+              <li><a href="/weapons/switch-axe/">Switch Axe</a></li>
+              <li><a href="/weapons/charge-blade/">Charge Blade</a></li>
+              <li><a href="/weapons/insect-glaive/">Insect Glaive</a></li>
+              <li><a href="/weapons/bow/">Bow</a></li>
+            </ul>
+          </li>
+
+          {% block nav4 %}
+          <li><a href="/armors/">Armors</a></li>
+          {% endblock %}
+
+          {% block nav5 %}
+          <li><a href="/items/">Items</a></li>
+          {% endblock %}
+
+          {% block nav6 %}
+          <li><a href="/contact/">Contact</a></li>
+          {% endblock %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+  {% endblock %}
+
+  <div class="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+
+  {% block footer %}
+  <footer class="container-fluid text-center">
+    <hr></hr>
+    <p>MH Guild © 2017</p>
+  </footer>
+  {% endblock %}
+
+</body>
+</html>

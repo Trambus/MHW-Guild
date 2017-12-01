@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  {% block title %}<title>MH Guild</title>{% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Add additional JS in static file -->
+  {% load static %}
+  <script src="{% static 'js/world.js' %}"></script>
+
+  <!-- Add additional CSS in static file -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/world.css' %}">
+
+</head>
+
+<body>
+
+  {% block navbar %}
+  <!-- Navbar -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" id="navHead" href="mhguild-home.html">
+          <span class="glyphicon glyphicon-home"></span>
+          MH World
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="/world/calculator/">Calculator</a></li>
+          <li><a href="/world/monsters/">Monsters</a></li>
+          <li><a href="/world/weapons/">Weapons</a></li>
+          <li><a href="/world/armors/">Armors</a></li>
+          <li><a href="/world/items/">Items</a></li>
+          <li><a href="/world/contact/">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  {% endblock %}
+
+  {% block content %}
+  {% endblock %}
+
+  {% block footer %}
+  <footer class="container-fluid text-center">
+    <hr></hr>
+    <p>MH Guild © 2017</p>
+  </footer>
+  {% endblock %}
+
+</body>
+</html>

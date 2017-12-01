@@ -1,0 +1,163 @@
+/* styles for the navbar, header, and footer */
+/* these objects are extended from world_base.html */
+/* EDIT WITH CAUTION */
+footer {
+  margin-bottom: 0px
+}
+
+header {
+  color: white;
+  background-color: rgb(30, 30, 30);
+}
+
+.kana {
+  color: rgb(140, 215, 60);
+  text-shadow: 0px 0px 5px rgb(140, 215, 60);
+}
+
+/* dropdown menu styles */
+.dropdown-menu {
+  min-width: 80px;
+}
+
+.dropdown.open ul.dropdown-menu {
+  background-color: rgb(30, 30, 30);
+}
+
+.dropdown.open ul.dropdown-menu li a {
+  font-size: 12px;
+}
+
+.dropdown.active.open ul.dropdown-menu li a {
+  color: white;
+  font-size: 12px;
+}
+
+.dropdown.active.open ul.dropdown-menu li a:hover {
+  color: rgb(140, 215, 60);
+  background-color: rgb(30, 30, 30);
+}
+
+.dropdown.open ul li.divider {
+  background-color: black;
+}
+
+.dropdown.open ul li.dropdown-header {
+  color: rgb(140, 215, 60);
+}
+
+/* navbar styles */
+
+.navbar {
+  margin-bottom: 0px;
+  border-radius: 0px;
+  background-color: rgb(30, 30, 30);
+}
+
+.nav.navbar-nav li a {
+  color: white;
+}
+
+.nav.navbar-nav li a:hover {
+  color: rgb(140, 215, 60);
+  text-shadow: 0px 0px 5px rgb(140, 215, 60);
+}
+
+.nav.navbar-nav li.active a{
+  color: rgb(140, 215, 60);
+  text-shadow: 0px 0px 5px rgb(140, 215, 60);
+}
+
+.nav.navbar-nav li.active a:hover {
+  color: rgb(140, 215, 60);
+  text-shadow: 0px 0px 5px rgb(140, 215, 60);
+}
+
+#navHead {
+  color: rgb(140, 215, 60);
+}
+
+#navHead:hover {
+  background-color: black;
+}
+
+/* neccessary padding for auto-sticky navbar */
+.menu-padding {
+  padding-top: 50px;
+}
+
+/* ------------------------------------------------- */
+
+/* countdown timer styles */
+
+#countdown-timer {
+  color: rgb(140, 215, 60);
+  text-shadow: 0px 0px 5px rgb(140, 215, 60);
+}
+
+#countdown-text {
+  color: white;
+}
+
+/* ------------------------------------------------- */
+
+/* accordion menu styles */
+
+.panel-default > .panel-heading {
+  color: white;
+  background-color: rgb(30, 30, 30);
+  border-color: black;
+  border-radius: 2px;
+}
+
+.panel-default > .panel-heading:hover {
+  color: rgb(140, 215, 60);
+  background-color: black;
+}
+
+.panel-default > .panel-heading.clicked {
+  color: rgb(140, 215, 60);
+  background-color: black;
+}
+
+.panel-group {
+  width: 100%;
+}
+
+.btn.btn-default {
+  color: white;
+  background-color: rgb(30, 30, 30);
+}
+
+.btn.btn-default:hover {
+  color: rgb(140, 215, 60);
+  background-color: black;
+}
+
+h2.list-group-item.active {
+  color: rgb(140, 215, 60);
+  background-color: black;
+  border-color: black;
+}
+
+h2.list-group-item.active:hover {
+  color: rgb(140, 215, 60);
+  background-color: black;
+  border-color: black;
+}
+
+a.list-group-item {
+  color: white;
+  background-color: rgb(30, 30, 30);
+  border-color: black;
+}
+
+a.list-group-item:hover {
+  color: rgb(140, 215, 60);
+  background-color: black;
+}
+
+a.list-group-item:focus {
+  color: rgb(140, 215, 60);
+  background-color: black;
+}

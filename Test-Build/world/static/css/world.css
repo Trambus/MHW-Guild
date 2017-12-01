@@ -1,0 +1,73 @@
+/* styles for the navbar and footer */
+/* both objects are extended from world_base.html */
+/* EDIT WITH CAUTION */
+footer {
+  margin-bottom: 0px
+}
+
+.navbar {
+  margin-bottom: 0px;
+  border-radius: 0px;
+  background-color: rgb(25, 25, 25);
+  box-shadow: 1px 1px 5px grey;
+}
+
+.nav.navbar-nav li a {
+  color: white;
+}
+
+.nav.navbar-nav li a:hover {
+  color: rgb(215, 220, 102);
+  background-color: black;
+}
+
+#navHead {
+  color: rgb(215, 220, 102);
+}
+
+#navHead:hover {
+  background-color: black;
+}
+
+
+/* styles for the countdown timer */
+.countdownTimer {
+  color: rgb(215, 220, 102);
+  font-size: 48px;
+  background-color: black;
+  box-shadow: 1px 1px 5px grey;
+  margin: 10px;
+  border-radius: 3px;
+}
+
+.countdownText {
+  color: rgb(25, 25, 25);
+  font-size: 18px;
+}
+
+.countdownText2 {
+  color: rgb(25, 25, 25);
+  font-size: 24px;
+}
+
+.panel-default > .panel-heading {
+  color: white;
+  background-color: rgb(25, 25, 25);
+  border-color: black;
+  border-radius: 2px;
+  box-shadow: 1px 1px 2px grey;
+}
+
+.panel-default > .panel-heading:hover {
+  color: rgb(215, 220, 102);
+  background-color: black;
+}
+
+.panel-default > .panel-heading.clicked {
+  color: rgb(215, 220, 102);
+  background-color: black;
+}
+
+.panel-group {
+  width: 100%;
+}
