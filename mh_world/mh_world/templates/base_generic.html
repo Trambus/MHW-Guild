@@ -2,19 +2,22 @@
 <html lang="en">
 <head>
 
-  {% block title %}<title>MH Guild</title>{% endblock %}
+  {% block title %}
+  <title>MH Guild</title>
+  {% endblock %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <!-- Add additional JS in static file -->
+  <!-- prepare static assets (js, css, imgs) -->
   {% load static %}
+
+  <!-- Add additional JS from static files -->
   <script src="{% static 'js/scripts.js' %}"></script>
 
-  <!-- Add additional CSS in static file -->
-  {% load static %}
+  <!-- Add additional CSS from static files -->
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 
 </head>
@@ -51,20 +54,9 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-
-          <!-- Each navblock can be replaced with a .active block -->
-
-          {% block nav1 %}
           <li><a href="/calculator/">Calculator</a></li>
-          {% endblock %}
-
-          {% block nav2 %}
           <li><a href="/monsters/">Monsters</a></li>
-          {% endblock %}
-
-          {% block nav3 %}
           <li class="dropdown">
-          {% endblock %}
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Weapons
             <span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -91,18 +83,9 @@
               <li><a href="/weapons/bow/">Bow</a></li>
             </ul>
           </li>
-
-          {% block nav4 %}
           <li><a href="/armors/">Armors</a></li>
-          {% endblock %}
-
-          {% block nav5 %}
           <li><a href="/items/">Items</a></li>
-          {% endblock %}
-
-          {% block nav6 %}
           <li><a href="/contact/">Contact</a></li>
-          {% endblock %}
         </ul>
       </div>
     </div>
@@ -116,7 +99,7 @@
 
   {% block footer %}
   <footer class="container-fluid text-center">
-    <hr></hr>
+    <hr />
     <p>MH Guild © 2017</p>
   </footer>
   {% endblock %}

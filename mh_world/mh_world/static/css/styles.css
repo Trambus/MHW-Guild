@@ -1,27 +1,88 @@
+/* psuedo root class for variable storage */
+:root {
+   --main-bg-color: rgb(30, 30, 30);
+   --secondary-color: rgb(140, 215, 60);
+   --secondary-shadow: 0px 0px 3px rgb(140, 215, 60);
+   --hover-fade: ease 0.5s;
+}
+
 /* styles for the navbar, header, and footer */
 /* these objects are extended from world_base.html */
-/* EDIT WITH CAUTION */
 footer {
   margin-bottom: 0px
 }
 
 header {
   color: white;
-  background-color: rgb(30, 30, 30);
+  background-color: var(--main-bg-color);
 }
 
+/* Japanese kana styles */
 .kana {
-  color: rgb(140, 215, 60);
-  text-shadow: 0px 0px 5px rgb(140, 215, 60);
+  color: var(--secondary-color);
+  text-shadow: var(--secondary-shadow);
+}
+
+/* navbar styles */
+.navbar {
+  margin-bottom: 0px;
+  border-radius: 0px;
+  background-color: var(--main-bg-color);
+}
+
+.nav.navbar-nav li a {
+  color: white;
+  transition: var(--hover-fade);
+}
+
+.nav.navbar-nav li a:hover {
+  color: var(--secondary-color);
+  text-shadow: var(--secondary-shadow);
+  background-color: var(--main-bg-color);
+}
+
+.nav.navbar-nav li.active a{
+  color: white;
+  background-color: var(--main-bg-color);
+}
+
+.nav.navbar-nav li.active a:hover {
+  color: var(--secondary-color);
+  text-shadow: var(--secondary-shadow);
+  background-color: var(--main-bg-color);
+}
+
+
+#navHead {
+  color: var(--secondary-color);
+  text-shadow: var(--secondary-shadow);
 }
 
 /* dropdown menu styles */
+.navbar-inverse .navbar-nav > .open > a {
+  color: var(--secondary-color);
+  text-shadow: var(--secondary-shadow);
+  background-color: var(--main-bg-color);
+}
+
+.navbar-inverse .navbar-nav > .open > a:focus {
+  color: var(--secondary-color);
+  text-shadow: var(--secondary-shadow);
+  background-color: var(--main-bg-color);
+}
+
+.navbar-inverse .navbar-nav > .open > a:hover {
+  color: var(--secondary-color);
+  text-shadow: var(--secondary-shadow);
+  background-color: var(--main-bg-color);
+}
+
 .dropdown-menu {
   min-width: 80px;
 }
 
 .dropdown.open ul.dropdown-menu {
-  background-color: rgb(30, 30, 30);
+  background-color: var(--main-bg-color);
 }
 
 .dropdown.open ul.dropdown-menu li a {
@@ -33,48 +94,9 @@ header {
 }
 
 .dropdown.open ul li.dropdown-header {
-  color: rgb(140, 215, 60);
-}
-
-/* navbar styles */
-
-.navbar {
-  margin-bottom: 0px;
-  border-radius: 0px;
-  background-color: rgb(30, 30, 30);
-}
-
-.nav.navbar-nav li a {
-  color: white;
-}
-
-.nav.navbar-nav li a:hover {
-  color: rgb(140, 215, 60);
-  text-shadow: 0px 0px 3px rgb(140, 215, 60);
-  background-color: rgb(30, 30, 30);
-}
-
-.nav.navbar-nav li.active a{
-  color: rgb(140, 215, 60);
-  text-shadow: 0px 0px 3px rgb(140, 215, 60);
-}
-
-.nav.navbar-nav li.active a:hover {
-  color: rgb(140, 215, 60);
-  text-shadow: 0px 0px 3px rgb(140, 215, 60);
-}
-
-a.dropdown-toggle {
-  color: rgb(140, 215, 60);
-}
-
-#navHead {
-  color: white;
-}
-
-#navHead:hover {
-  color: rgb(140, 215, 60);
-  text-shadow: 0px 0px 3px rgb(140, 215, 60);
+  font-size: 16px;
+  color: var(--secondary-color);
+  text-shadow: var(--secondary-shadow);
 }
 
 /* neccessary padding for auto-sticky navbar */
@@ -82,13 +104,21 @@ a.dropdown-toggle {
   padding-top: 50px;
 }
 
+/* home page image banner */
+.hero-box {
+  height: 380px;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
 /* ------------------------------------------------- */
 
 /* countdown timer styles */
 
 #countdown-timer {
-  color: rgb(140, 215, 60);
-  text-shadow: 0px 0px 3px rgb(140, 215, 60);
+  color: var(--secondary-color);
+  text-shadow: var(--secondary-shadow);
 }
 
 #countdown-text {
@@ -102,19 +132,25 @@ a.dropdown-toggle {
 
 .panel-default > .panel-heading {
   color: white;
-  background-color: rgb(30, 30, 30);
+  background-color: var(--main-bg-color);
   border-color: black;
   border-radius: 2px;
+	transition: var(--hover-fade);
 }
 
 .panel-default > .panel-heading:hover {
-  color: rgb(140, 215, 60);
-  background-color: black;
+  color: var(--secondary-color);
+  text-shadow: var(--secondary-shadow);
+  background-color: var(--main-bg-color);
 }
 
 .panel-default > .panel-heading.clicked {
-  color: rgb(140, 215, 60);
-  background-color: black;
+  color: var(--secondary-color);
+  text-shadow: var(--secondary-shadow);
+}
+
+.panel-body {
+	background-color: rgb(250, 250, 250);
 }
 
 .panel-group {
@@ -123,38 +159,41 @@ a.dropdown-toggle {
 
 .btn.btn-default {
   color: white;
-  background-color: rgb(30, 30, 30);
+  background-color: var(--main-bg-color);
+	transition: var(--hover-fade);
 }
 
 .btn.btn-default:hover {
-  color: rgb(140, 215, 60);
+  color: var(--secondary-color);
+  text-shadow: var(--secondary-shadow);
   background-color: black;
 }
 
 h2.list-group-item.active {
-  color: rgb(140, 215, 60);
+  color: var(--secondary-color);
   background-color: black;
   border-color: black;
 }
 
 h2.list-group-item.active:hover {
-  color: rgb(140, 215, 60);
+  color: var(--secondary-color);
   background-color: black;
   border-color: black;
 }
 
 a.list-group-item {
   color: white;
-  background-color: rgb(30, 30, 30);
+  background-color: var(--main-bg-color);
   border-color: black;
+	transition: var(--hover-fade);
 }
 
 a.list-group-item:hover {
-  color: rgb(140, 215, 60);
+  color: var(--secondary-color);
   background-color: black;
 }
 
 a.list-group-item:focus {
-  color: rgb(140, 215, 60);
+  color: var(--secondary-color);
   background-color: black;
 }

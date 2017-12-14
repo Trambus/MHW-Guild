@@ -1,15 +1,20 @@
 {% extends 'base_generic.html' %}
 
 {% block content %}
-<!-- MH World release countdown -->
-
+{% load static %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 hero-box" style="background-image: url({% static 'images/home-bg.jpg' %})">
+    </div>
+  </div>
+</div>
 
 <!-- accordian menu -->
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-2"></div>
     <div class="col-sm-8">
-      <hr></hr>
+      <hr />
       <div class="panel-group" id="accordion">
 
         <!-- Calculator panel -->
@@ -19,19 +24,21 @@
           </div>
           <div id="collapse1" class="panel-collapse collapse">
             <div class="panel-body">
-              Have you ever had trouble comparing two similar weapons? Or knowing when it's worth
+              <h3>Damage calculation made simple.</h3>
+              <br />
+              <p>Have you ever had trouble comparing two similar weapons? Or knowing when it's worth
               using an element-focused weapon instead of something with more raw damage? What about
               armor skills? Do you fret over taking <strong>Critical Eye</strong> instead of
               <strong>Attack Up</strong>? Or would you just like to know how much all of those attack
-              boosters <i>actually</i> help?
-              <br></br>
-              Well I have the perfect thing for you! As a labor of love and curiosity, I have built a
-              calculator to answer all of the above questions-- <strong><i>and more!</i></strong> But
-              I still consider it to be a work in progress. So please leave some feedback if you run
-              into any issues.
-              <br></br>
+              boosters <i>actually</i> help?</p>
+              <br />
+              <p>Well I have the perfect thing for you! As a labor of love and curiosity, I have built a
+              calculator to answer all of the above questions-- <strong><i>and more!</i></strong>
+							However, it's still a work in progress. So please leave some feedback if you run
+              into any issues. You can notfiy me via the contact page or on Github.</p>
+              <br />
                 <div class="text-center">
-                  <a class="btn btn-default" href="/calculator/">Start Mathing!</a>
+                  <a class="btn btn-default" href="/calculator/">Start now!</a>
                 </div>
             </div>
           </div>
@@ -59,11 +66,11 @@
           <div id="collapse3" class="panel-collapse collapse">
             <div class="panel-body">
               <h2 class="text-center">How do you like to play?</h2>
-              <br></br>
+              <br />
               <h4>Do you enjoy being quick and reactive?</h4>
               <h4 class="text-center">Or maybe you're methodical and preemptive?</h4>
               <h4 class="text-right">Perhaps you'd rather take a more stylish approach?</h4>
-              <br></br>
+              <br />
               <p>Regardless of your preferred playstyle, there is sure to
               be a weapon type for you. Instead of the traditional blademaster/gunner
               split: they are now categorized as <strong>Light</strong>, <strong>Heavy</strong>, and
@@ -73,7 +80,7 @@
               options, depending on the Monster that you're facing.
               </p>
               <div class="row">
-                <hr></hr>
+                <hr />
                 <div class="col-sm-4 text-center">
                   <div class="list-group">
                     <h2 class="list-group-item active">Light</h2>
