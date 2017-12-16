@@ -2,14 +2,20 @@
 :root {
    --main-bg-color: rgb(30, 30, 30);
    --secondary-color: rgb(140, 215, 60);
-   --secondary-shadow: 0px 0px 3px rgb(140, 215, 60);
-   --hover-fade: ease 0.5s;
+   --secondary-shadow: 0px 0px 2px rgb(140, 215, 60);
+   --hover-fade: linear 0.2s;
 }
 
+/* ------------------------------------------------- */
+
 /* styles for the navbar, header, and footer */
-/* these objects are extended from world_base.html */
+/* these objects are extended from base_generic.html */
 footer {
-  margin-bottom: 0px
+  color: white;
+  margin-bottom: 0px;
+	background-color: var(--main-bg-color);
+	padding-top: 20px;
+  box-shadow: -2px -2px 5px grey;
 }
 
 header {
@@ -17,11 +23,37 @@ header {
   background-color: var(--main-bg-color);
 }
 
+/* header logo */
+.col-sm-1 img {
+	height: 100px;
+	width: auto;
+	display: block;
+}
+
+.header-title {
+	transition: ease 1s;
+}
+
 /* Japanese kana styles */
 .kana {
   color: var(--secondary-color);
   text-shadow: var(--secondary-shadow);
+	transition: ease 1s;
 }
+/* neccessary padding for auto-sticky navbar */
+.menu-padding {
+  padding-top: 50px;
+}
+
+/* home page image banner */
+.hero-box {
+  height: 380px;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+}
+
+/* ------------------------------------------------- */
 
 /* navbar styles */
 .navbar {
@@ -33,6 +65,8 @@ header {
 .nav.navbar-nav li a {
   color: white;
   transition: var(--hover-fade);
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
 }
 
 .nav.navbar-nav li a:hover {
@@ -57,6 +91,8 @@ header {
   color: var(--secondary-color);
   text-shadow: var(--secondary-shadow);
 }
+
+/* ------------------------------------------------- */
 
 /* dropdown menu styles */
 .navbar-inverse .navbar-nav > .open > a {
@@ -99,19 +135,6 @@ header {
   text-shadow: var(--secondary-shadow);
 }
 
-/* neccessary padding for auto-sticky navbar */
-.menu-padding {
-  padding-top: 50px;
-}
-
-/* home page image banner */
-.hero-box {
-  height: 380px;
-  background-size: cover;
-  background-position: bottom;
-  background-attachment: fixed;
-}
-
 /* ------------------------------------------------- */
 
 /* countdown timer styles */
@@ -128,14 +151,29 @@ header {
 
 /* ------------------------------------------------- */
 
-/* accordion menu styles */
+/* button styles */
+.btn.btn-default {
+  color: white;
+  background-color: var(--main-bg-color);
+	transition: var(--hover-fade);
+}
 
+.btn.btn-default:hover {
+  color: var(--secondary-color);
+  text-shadow: var(--secondary-shadow);
+  background-color: black;
+}
+
+/* ------------------------------------------------- */
+
+/* accordion menu styles */
 .panel-default > .panel-heading {
   color: white;
   background-color: var(--main-bg-color);
   border-color: black;
   border-radius: 2px;
 	transition: var(--hover-fade);
+	cursor: pointer;
 }
 
 .panel-default > .panel-heading:hover {
@@ -157,27 +195,20 @@ header {
   width: 100%;
 }
 
-.btn.btn-default {
-  color: white;
-  background-color: var(--main-bg-color);
-	transition: var(--hover-fade);
-}
+/* ------------------------------------------------- */
 
-.btn.btn-default:hover {
-  color: var(--secondary-color);
-  text-shadow: var(--secondary-shadow);
-  background-color: black;
-}
-
+/* list group styles */
 h2.list-group-item.active {
   color: var(--secondary-color);
-  background-color: black;
+	text-shadow: var(--secondary-shadow);
+  background-color: var(--main-bg-color);
   border-color: black;
 }
 
 h2.list-group-item.active:hover {
   color: var(--secondary-color);
-  background-color: black;
+	text-shadow: var(--secondary-shadow);
+  background-color: var(--main-bg-color);
   border-color: black;
 }
 
@@ -190,10 +221,34 @@ a.list-group-item {
 
 a.list-group-item:hover {
   color: var(--secondary-color);
-  background-color: black;
+	text-shadow: var(--secondary-shadow);
+  background-color: var(--main-bg-color);
 }
 
 a.list-group-item:focus {
   color: var(--secondary-color);
-  background-color: black;
+	text-shadow: var(--secondary-shadow);
+  background-color: var(--main-bg-color);
 }
+
+@media screen and (max-width: 900px) {
+	#countdown-timer {
+		display: none;
+	}
+	
+	#countdown-text {
+		display: none;
+	}
+	
+	.header-title {
+		font-size: 32px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.col-sm-1 img {
+		display: none;
+	}
+}
+
+

@@ -3,7 +3,7 @@
 <head>
 
   {% block title %}
-  <title>MH Guild</title>
+  <title>Monster Hunter's Guild</title>
   {% endblock %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,6 +19,14 @@
 
   <!-- Add additional CSS from static files -->
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+	
+	<!-- favicon information & variations -->
+	<link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
+	<link rel="manifest" href="{% static 'favicons/manifest.json' %}">
+	<link rel="mask-icon" href="{% static 'favicons/safari-pinned-tab.svg' %}" color="#5bbad5">
+	<meta name="theme-color" content="#ffffff">
 
 </head>
 
@@ -26,14 +34,21 @@
   {% block header %}
   <!-- Page header -->
   <header class="container-fluid">
-    <h1>The Monster Hunter's Guild
-      <span style="float:right;" id="countdown-timer"></span>
-    </h1>
-
-
-    <h4 class="kana">モンスターハンターズギルド
-      <span style="float:right;" id="countdown-text"></span>
-    </h4>
+		<div class="row">
+			<div class="col-sm-1">
+				<img class="img-responsive" src="{% static 'favicons/guild-logo.svg' %}" alt="Guild Logo">
+			</div>
+			<div class="col-sm-11">
+				<h1 class="header-title">The Monster Hunter's Guild
+					<!-- countdown timer (delete appropriate JS when removing) -->
+					<span style="float:right;" id="countdown-timer"></span>
+				</h1>
+				<h4 class="kana">モンスターハンターズギルド
+					<!-- countdown text (delete appropriate JS when removing) -->
+					<span style="float:right;" id="countdown-text"></span>
+				</h4>
+			</div>
+		</div>
   </header>
   {% endblock %}
 
@@ -47,7 +62,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" id="navHead" href="/">
+        <a class="navbar-brand" id="navHead" href="/" style="float:left">
           <span class="glyphicon glyphicon-home"></span>
           MH World
         </a>
@@ -99,7 +114,6 @@
 
   {% block footer %}
   <footer class="container-fluid text-center">
-    <hr />
     <p>MH Guild © 2017</p>
   </footer>
   {% endblock %}

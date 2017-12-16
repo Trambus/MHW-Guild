@@ -4,8 +4,7 @@
 {% load static %}
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-12 hero-box" style="background-image: url({% static 'images/home-bg.jpg' %})">
-    </div>
+    <div class="col-sm-12 hero-box" style="background-image: url({% static 'images/anj-rath-min.jpg' %})"></div>
   </div>
 </div>
 
@@ -20,7 +19,7 @@
         <!-- Calculator panel -->
         <div class="panel panel-default">
           <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-            <h4 class="panel-title"><span class="glyphicon glyphicon-plus"></span> Calculator</h4>
+            <h4 class="panel-title">Calculator<span style="float:right" class="glyphicon glyphicon-plus"></span></h4>
           </div>
           <div id="collapse1" class="panel-collapse collapse">
             <div class="panel-body">
@@ -48,7 +47,7 @@
         <!-- Monsters panel -->
         <div class="panel panel-default">
           <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-            <h4 class="panel-title"><span class="glyphicon glyphicon-plus"></span> Monsters</h4>
+            <h4 class="panel-title">Monsters<span style="float:right" class="glyphicon glyphicon-plus"></span></h4>
           </div>
           <div id="collapse2" class="panel-collapse collapse">
             <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -61,20 +60,20 @@
         <!-- Weapons panel -->
         <div class="panel panel-default">
           <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-            <h4 class="panel-title"><span class="glyphicon glyphicon-plus"></span> Weapons</h4>
+            <h4 class="panel-title">Weapons<span style="float:right" class="glyphicon glyphicon-plus"></span></h4>
           </div>
           <div id="collapse3" class="panel-collapse collapse">
             <div class="panel-body">
-              <h2 class="text-center">How do you like to play?</h2>
+              <h3 class="text-center">What's your playstlye?</h3>
               <br />
-              <h4>Do you enjoy being quick and reactive?</h4>
-              <h4 class="text-center">Or maybe you're methodical and preemptive?</h4>
-              <h4 class="text-right">Perhaps you'd rather take a more stylish approach?</h4>
+              <h4 class="text-left">Quick-thinking and reactive?</h4>
+              <h4 class="text-center">Methodical and preemptive?</h4>
+              <h4 class="text-right">Or somewhere inbetween?</h4>
               <br />
               <p>Regardless of your preferred playstyle, there is sure to
               be a weapon type for you. Instead of the traditional blademaster/gunner
               split: they are now categorized as <strong>Light</strong>, <strong>Heavy</strong>, and
-              <strong>Technical</strong>. No weapon type is neccessarily stronger than another. So your
+              <strong>Technical</strong>. No weapon type is neccessarily better than another. So your
               skill level will often be the most important factor. I urge you to try every type, as each
               one has a distinct playstyle. Not to mention that it can be useful to have a few different
               options, depending on the Monster that you're facing.
@@ -119,7 +118,7 @@
         <!-- Armors panel -->
         <div class="panel panel-default">
           <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
-            <h4 class="panel-title"><span class="glyphicon glyphicon-plus"></span> Armors</h4>
+            <h4 class="panel-title">Armors<span style="float:right" class="glyphicon glyphicon-plus"></span></h4>
           </div>
           <div id="collapse4" class="panel-collapse collapse">
             <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -132,7 +131,7 @@
         <!-- Items panel -->
         <div class="panel panel-default">
           <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse5">
-            <h4 class="panel-title"><span class="glyphicon glyphicon-plus"></span> Items</h4>
+            <h4 class="panel-title">Items<span style="float:right" class="glyphicon glyphicon-plus"></span></h4>
           </div>
           <div id="collapse5" class="panel-collapse collapse">
             <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -149,3 +148,8 @@
 </div>
 <!-- accordion end -->
 {% endblock %}
+<script type="text/javascript">
+$(function() {
+	$( "#Accordion1" ).accordion(); 
+});
+</script>
