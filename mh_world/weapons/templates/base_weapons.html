@@ -1,12 +1,20 @@
 {% extends 'base_generic.html' %}
 
+{% load static %}
 {% block content %}
 <div class="container-fluid">
-  <h2>Weapon Overview</h2>
-  <p style="width:50%">There are fourteen different weapon categories and they all play differently.
-    I know, I know, it can be difficult to find the right one for your playstyle. But I will
-    do my best, here, to highlight the important parts. Even if you don't change to a
-    new weapon, I hope to at least show you how the others sides live!
+  <div class="row">
+    <div class="col-sm-12 hero-box" style="background-image: url({% static 'images/rath-battle-min.jpg' %})"></div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <h2>Weapon Types</h2>
+  <p style="width:50%">There are fourteen weapon types to choose from and they each offer a unique
+		experience. If you're new to the series, then I recommend that you ignore all tier-lists.
+		Every weapon class is viable against every monster. However, there are numerous factors which 
+		make certain weapons better in certain situations. So some weapons may get faster clear times on 
+		particular hunts. 
   </p>
 </div>
 

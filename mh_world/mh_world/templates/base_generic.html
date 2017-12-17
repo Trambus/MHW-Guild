@@ -35,19 +35,10 @@
   <!-- Page header -->
   <header class="container-fluid">
 		<div class="row">
-			<div class="col-sm-1">
-				<img class="img-responsive" src="{% static 'favicons/guild-logo.svg' %}" alt="Guild Logo">
+			<div class="col-sm-6">
+				<a href="/"><img class="header-banner" src="{% static 'images/banner.svg' %}" alt="Header Banner"></a>
 			</div>
-			<div class="col-sm-11">
-				<h1 class="header-title">The Monster Hunter's Guild
-					<!-- countdown timer (delete appropriate JS when removing) -->
-					<span style="float:right;" id="countdown-timer"></span>
-				</h1>
-				<h4 class="kana">モンスターハンターズギルド
-					<!-- countdown text (delete appropriate JS when removing) -->
-					<span style="float:right;" id="countdown-text"></span>
-				</h4>
-			</div>
+			<div class="col-sm-6"></div>
 		</div>
   </header>
   {% endblock %}
@@ -64,7 +55,7 @@
         </button>
         <a class="navbar-brand" id="navHead" href="/" style="float:left">
           <span class="glyphicon glyphicon-home"></span>
-          MH World
+          Home
         </a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
@@ -102,6 +93,11 @@
           <li><a href="/items/">Items</a></li>
           <li><a href="/contact/">Contact</a></li>
         </ul>
+				<a class="navbar-brand" id="nav-github" href="https://github.com/Trambus/MHW-Guild">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+					Github
+					<span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
       </div>
     </div>
   </nav>

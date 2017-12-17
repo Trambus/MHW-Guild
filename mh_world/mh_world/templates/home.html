@@ -2,9 +2,13 @@
 
 {% block content %}
 {% load static %}
+
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-12 hero-box" style="background-image: url({% static 'images/anj-rath-min.jpg' %})"></div>
+    <div class="col-sm-12 hero-box" style="background-image: url({% static 'images/anj-rath-min.jpg' %})">
+			<h1 id="countdown-timer"></h1>
+			<p id="countdown-text"></p>
+		</div>
   </div>
 </div>
 
